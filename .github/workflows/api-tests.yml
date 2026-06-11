@@ -28,11 +28,11 @@ jobs:
 
       - name: Run API Tests
         run: |
-          newman run collection.json \
-            -e environment.json \
+          newman run ./Part_B_API_Automation/collection.json \
+            -e .\Part_B_API_Automation\environment.json \
             -d data.json \
             -r cli,html \
-            --reporter-html-export reports/report.html
+            --reporter-html-export ./Part_B_API_Automation/reports/report.html
 
       - name: Upload Report
         uses: actions/upload-artifact@v4
