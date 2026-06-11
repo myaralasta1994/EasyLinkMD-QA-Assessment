@@ -38,4 +38,4 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: newman-report
-          path: reports/report.html
+          path: ./Part_B_API_Automation/reports/report.html
