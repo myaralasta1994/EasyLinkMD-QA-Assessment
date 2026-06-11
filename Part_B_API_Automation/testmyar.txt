@@ -1,0 +1,2 @@
+run the test and get report
+newman run collection.json -e environment.json -r html --reporter-html-export report.html
