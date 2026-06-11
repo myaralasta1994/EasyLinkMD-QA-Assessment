@@ -29,7 +29,7 @@ jobs:
       - name: Run API Tests
         run: |
           newman run ./Part_B_API_Automation/collection.json \
-            -e .\Part_B_API_Automation\environment.json \
+            -e ./Part_B_API_Automation/environment.json \
             -d data.json \
             -r cli,html \
             --reporter-html-export ./Part_B_API_Automation/reports/report.html
