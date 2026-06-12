@@ -1,0 +1,143 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 3,
+    "passes": 3,
+    "pending": 0,
+    "failures": 0,
+    "start": "2026-06-12T00:17:04.128Z",
+    "end": "2026-06-12T00:17:11.148Z",
+    "duration": 7020,
+    "testsRegistered": 3,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "6dfeb509-49d0-4029-8767-67afcc4e43e2",
+      "title": "",
+      "fullFile": "cypress\\e2e\\login.cy.js",
+      "file": "cypress\\e2e\\login.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "4120156a-86d1-46ec-812a-00b4431a9e2a",
+          "title": "Login Tests",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Valid Login",
+              "fullTitle": "Login Tests Valid Login",
+              "timedOut": null,
+              "duration": 2993,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_LoginPage.default.login(_users.default.standardUser.username, _users.default.standardUser.password);\ncy.url().should('include', 'inventory');\ncy.get('.title').should('be.visible').and('have.text', 'Products');",
+              "err": {},
+              "uuid": "6988f8cf-a2be-4ee0-b023-b8f33c34d100",
+              "parentUUID": "4120156a-86d1-46ec-812a-00b4431a9e2a",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Invalid Login",
+              "fullTitle": "Login Tests Invalid Login",
+              "timedOut": null,
+              "duration": 2412,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_LoginPage.default.login('invalid', 'invalid');\n_LoginPage.default.getErrorMessage().should('contain', 'Username and password do not match');\ncy.url().should('eq', 'https://www.saucedemo.com/');",
+              "err": {},
+              "uuid": "59befb60-c5ef-40fb-9d10-5636d0272707",
+              "parentUUID": "4120156a-86d1-46ec-812a-00b4431a9e2a",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Locked User Login",
+              "fullTitle": "Login Tests Locked User Login",
+              "timedOut": null,
+              "duration": 1471,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_LoginPage.default.login('locked_out_user', 'secret_sauce');\n_LoginPage.default.getErrorMessage().should('contain', 'locked out');\ncy.url().should('eq', 'https://www.saucedemo.com/');",
+              "err": {},
+              "uuid": "ac7b7710-50d7-4cc4-9526-014c475879c1",
+              "parentUUID": "4120156a-86d1-46ec-812a-00b4431a9e2a",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "6988f8cf-a2be-4ee0-b023-b8f33c34d100",
+            "59befb60-c5ef-40fb-9d10-5636d0272707",
+            "ac7b7710-50d7-4cc4-9526-014c475879c1"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 6876,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.4"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "mochawesome-report",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.3.2"
+    }
+  }
+}

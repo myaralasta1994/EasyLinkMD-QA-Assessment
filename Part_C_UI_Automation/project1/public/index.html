@@ -1,0 +1,45 @@
+<!-- public/index.html -->
+<html>
+<head><title>Image Dashboard</title></head>
+<body>
+  <h1>Upload Image</h1>
+  <input type="file" data-cy="image-upload" />
+
+  <div data-cy="prediction-box" style="display:none;">
+    <p data-cy="confidence-score">Confidence: 89%</p>
+    <button data-cy="mark-correct">Mark as Correct</button>
+    <p data-cy="mark-status"></p>
+  </div>
+
+  <select data-cy="filter-dropdown">
+    <option value="scratch">Scratch</option>
+    <option value="clean">Clean</option>
+  </select>
+
+  <button data-cy="export-csv">Export CSV</button>
+
+  <script>
+    const input = document.querySelector('[data-cy="image-upload"]');
+    const box = document.querySelector('[data-cy="prediction-box"]');
+    const status = document.querySelector('[data-cy="mark-status"]');
+    const markBtn = document.querySelector('[data-cy="mark-correct"]');
+    const exportBtn = document.querySelector('[data-cy="export-csv"]');
+
+    input.addEventListener('change', () => {
+      box.style.display = 'block';
+    });
+
+    markBtn.addEventListener('click', () => {
+      status.textContent = 'Correct';
+    });
+
+    exportBtn.addEventListener('click', () => {
+      const csvContent = 'data:text/csv;charset=utf-8,prediction,correct\nScratch,Yes';
+      const a = document.createElement('a');
+      a.href = encodeURI(csvContent);
+      a.download = 'annotations.csv';
+      a.click();
+    });
+  </script>
+</body>
+</html>
