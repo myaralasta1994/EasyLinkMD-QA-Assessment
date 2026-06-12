@@ -4,6 +4,7 @@ import CartPage from '../pages/CartPage';
 import CheckoutPage from '../pages/CheckoutPage';
 import users from '../fixtures/users.json';
 import cards from '../fixtures/cards.json';
+import 'cypress-mochawesome-reporter/register';
 
 
 

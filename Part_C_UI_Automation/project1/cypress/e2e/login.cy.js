@@ -1,6 +1,7 @@
 import LoginPage from '../pages/LoginPage';
 import users from '../fixtures/users.json';
 import InventoryPage from '../pages/InventoryPage';
+import 'cypress-mochawesome-reporter/register';
 
 describe('Login Tests', () => {
 
