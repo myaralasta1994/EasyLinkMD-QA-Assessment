@@ -42,6 +42,3 @@ https://nodejs.org
 
 
 
-git add .  
-git commit -m "push b create"
-git push origin main   
