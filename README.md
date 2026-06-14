@@ -25,9 +25,11 @@ https://nodejs.org
 2. Clone project from github folder Part_C_UI_Automation/project 1
 3. open cmd and execute cd <project-folder>
 4. npm install
-5. npx cypress run     "it will run all tests in silent mode"   after test is done you can show videos in cypress/videos folder
-6. npx cypress open    "it will open cypress and show you test step by step"
-7. HTML report here .\Part_C_UI_Automation\project1\cypress\reports\html     "it will be generated every time you run the test"
+5. npx cypress version   To make sure Cypress installed
+6. if not installed then execute: npx cypress install
+7. npx cypress run     "it will run all tests in silent mode"   after test is done you can show videos in cypress/videos folder
+8. npx cypress open    "it will open cypress and show you test step by step"
+9. HTML report here .\Part_C_UI_Automation\project1\cypress\reports\html     "it will be generated every time you run the test"
 =============================================================================================================================================
 
 
